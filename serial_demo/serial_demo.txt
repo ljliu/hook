@@ -1,0 +1,20 @@
+sudo ./serial_demo -f /dev/ttyUSB[n] [-test]
+-f set the serial port
+-test enable test mode
+
+Command list:
+    0      : Exit
+    1      : Enable beamforming
+    2      : Disable beamforming
+    3      : Get beamforming status
+    4 <dir>: Set beamforming direction
+    5      : Get DOA direction
+    6      : Get all beamforming directions
+    7      : Get wakeup words
+    99     : Switch showing log from UART
+    ENTER  : Repeat last command
+
+Other keys to show the command list.
+
+If no ttyUSB[n] found, try:
+echo 0x1d6b 0xA4A6 >/sys/bus/usb-serial/drivers/generic/new_id
